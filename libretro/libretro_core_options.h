@@ -56,11 +56,11 @@ struct retro_core_option_definition option_defs_us[] = {
 
    {
       "vbanext_bios",
-      "Use BIOS if available (Restart)",
-      "Uses BIOS present in RetroArch's system directory.",
+      "优先使用BIOS(需要重新启动)",
+      "使用RetroArch系统目录中的BIOS.",
       {
-         { "enabled", NULL },
-         { "disabled", NULL },
+         { "enabled", "启用" },
+         { "disabled", "禁用" },
          { NULL, NULL},
       },
       "enabled"
@@ -68,8 +68,8 @@ struct retro_core_option_definition option_defs_us[] = {
 #ifdef USE_FRAME_SKIP
    {
       "vbanext_frameskip",
-      "Frameskip",
-      "",
+      "跳帧",
+      "跳过N+1帧中的第N帧.",
       {
          { "0",         NULL },
          { "1/3",          NULL },
@@ -85,19 +85,19 @@ struct retro_core_option_definition option_defs_us[] = {
 #endif
    {
         "vbanext_turboenable",
-        "Enable Turbo Buttons",
-        "Enable or disable gamepad turbo buttons.",
+        "启用连发",
+        "启用或禁用游戏手柄连发功能.",
         {
-            { "disabled", NULL },
-            { "enabled",  NULL },
+            { "disabled", "禁用" },
+            { "enabled",  "启用" },
             { NULL, NULL },
         },
         "disabled"
     },
     {
         "vbanext_turbodelay",
-        "Turbo Delay in frames",
-        "Repeat rate of turbo triggers in frames. Higher value triggers more.",
+        "连发延迟帧数",
+        "帧中连发触发的次数, 值越大连发速度越快.",
         {
             { "1",  NULL },
             { "2",  NULL },
